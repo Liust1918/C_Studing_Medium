@@ -62,8 +62,17 @@ int check_1(const char s[],int n) {
 /*hit和blow的判断*/
 //hit  是数值和位置一样
 //blow 是数值一样,位置不一样
-void judge_1(const char s[], const int n[], int* hit, int* blow, int n) {
-
+void judge_1(const char s[], const int n[], int* hit, int* blow,int len) {
+	for (int i=0; i < len; i++) {
+		for (int j = 0; j < len; j++){
+			if (s[i]==n[j]) {
+				blow++;
+			}
+			if (i==j) {
+				hit++;
+			}
+		}
+	}
 
 
 }
