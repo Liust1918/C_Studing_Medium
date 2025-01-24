@@ -134,7 +134,6 @@ int main(void) {
 		print_result(hit + blow, hit); //hit 数字和位置一样  blow 数字一样位置不一样
 		try_no++;
 		putchar('\n');
-		
 	} while (hit!=4);
 	end = clock();
 	printf_s("用了%d次,用时%.lf 秒 \n",try_no,(double)(end-start)/CLOCKS_PER_SEC );
