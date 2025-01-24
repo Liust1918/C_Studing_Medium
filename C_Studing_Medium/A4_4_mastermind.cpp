@@ -28,36 +28,35 @@ void make4digits_1(int x[],int n) {
 					break;
 				}
 			}
-
-		} while (j<i);
+			if (j == i)break;
+		} while (1);
 		x[i] = val;
 	}
 }
 
 /*检查已输入的字符串s的有效性*/
-int check_1(const char s[]) {
+void check_1(const char s[]) {
 	int i, j;
 	int length;
 	//字符串不超过4
 	length = strlen(s);
-	if (length>4) {
-		return 1;
+	if (length!=4) {
+		puts("字符串不能超过4");
 	}
 
 	// 不包含了除了数字以外的字符
 	for (i = 0; i < length; i++){
 		if (s[i]<'0'|| s[i]>'9') {
-			return 2;
+			puts("只能输入数字");
 		}
 		//字符串不重复
 		for (j = 0;  j< i; j++){
 			if (s[i]==s[j]) {
-				return 3;
+				puts("不能输入重复的数字");
 			}
 		}
 	}
 
-	return 0;
 }
 
 /*hit和blow的判断*/
@@ -129,11 +128,13 @@ int main(void) {
 	start = clock();
 	do{
 		puts("请输入4个数字");
-		scanf_s("%s", &result);
+		scanf_s("%s", result, (unsigned)_countof(result));
 		check_1(result);
 		judge_1(result, n, &hit, &blow, 4);
 		print_result(hit + blow, hit); //hit 数字和位置一样  blow 数字一样位置不一样
 		try_no++;
+		putchar('\n');
+		
 	} while (hit!=4);
 	end = clock();
 	printf_s("用了%d次,用时%.lf 秒 \n",try_no,(double)(end-start)/CLOCKS_PER_SEC );
