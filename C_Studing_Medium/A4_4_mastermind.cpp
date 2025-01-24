@@ -106,7 +106,7 @@ void print_result(int snum, int spos) {
 	//用了n秒
 	//用时 多少秒
 	//请按任意键继续...
-
+	//测试
 }
 
 int main(void) {
