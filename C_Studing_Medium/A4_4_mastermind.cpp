@@ -35,27 +35,31 @@ void make4digits_1(int x[],int n) {
 }
 
 /*检查已输入的字符串s的有效性*/
-void check_1(const char s[]) {
+int check_1(const char s[]) {
 	int i, j;
 	int length;
 	//字符串不超过4
 	length = strlen(s);
 	if (length!=4) {
 		puts("字符串不能超过4");
+		return 1;
 	}
 
 	// 不包含了除了数字以外的字符
 	for (i = 0; i < length; i++){
 		if (s[i]<'0'|| s[i]>'9') {
 			puts("只能输入数字");
+			return 2;
 		}
 		//字符串不重复
 		for (j = 0;  j< i; j++){
 			if (s[i]==s[j]) {
 				puts("不能输入重复的数字");
+				return 3;
 			}
 		}
 	}
+	return 0;
 
 }
 
@@ -101,19 +105,14 @@ void print_result(int snum, int spos) {
 		}
 	}
 
-	
-	//用了n秒
-	//用时 多少秒
-	//请按任意键继续...
-	//测试
 }
 
 int main(void) {
 
 	int try_no=0;//输入次数
 	int ckk_code;//已经输入的字符串的检查结果
-	int hit=0;//数字和位置都正确的数字个数
-	int blow=0;//数字正确但是位置不正确的数字个数
+	int hit;//数字和位置都正确的数字个数
+	int blow;//数字正确但是位置不正确的数字个数
 	int n[4];//要猜的数字
 	char result[10];//输入的数字
 	clock_t start, end;//开始时间，结束时间	
@@ -127,11 +126,15 @@ int main(void) {
 	make4digits_1(n, 4);
 	start = clock();
 	do{
+		hit = 0;
+		blow = 0;
 		puts("请输入4个数字");
 		scanf_s("%s", result, (unsigned)_countof(result));
-		check_1(result);
-		judge_1(result, n, &hit, &blow, 4);
-		print_result(hit + blow, hit); //hit 数字和位置一样  blow 数字一样位置不一样
+		ckk_code=check_1(result);
+		if (ckk_code==0) {
+			judge_1(result, n, &hit, &blow, 4);
+			print_result(hit + blow, hit); //hit 数字和位置一样  blow 数字一样位置不一样
+		}
 		try_no++;
 		putchar('\n');
 	} while (hit!=4);
