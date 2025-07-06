@@ -63,5 +63,9 @@
     <ClCompile Include="A4_4_mastermind.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+	  <ClCompile Include="goto.cpp">
+		  <Filter>Resource Files</Filter>
+	  </ClCompile>
+	  
   </ItemGroup>
 </Project>
