@@ -107,7 +107,7 @@ void print_result(int snum, int spos) {
 
 }
 
-int main(void) {
+int main_16(void) {
 
 	int try_no=0;//输入次数
 	int ckk_code;//已经输入的字符串的检查结果
