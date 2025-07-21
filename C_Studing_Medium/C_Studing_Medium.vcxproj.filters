@@ -63,9 +63,19 @@
     <ClCompile Include="A4_4_mastermind.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-	  <ClCompile Include="goto.cpp">
-		  <Filter>Resource Files</Filter>
-	  </ClCompile>
-	  
+    <ClCompile Include="A5_1_kiokud.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hw.dat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="wr.dat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="wc.dat">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

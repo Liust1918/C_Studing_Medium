@@ -143,6 +143,12 @@
     <ClCompile Include="A4_2_check.cpp" />
     <ClCompile Include="A4_3_jugde.cpp" />
     <ClCompile Include="A4_4_mastermind.cpp" />
+    <ClCompile Include="A5_1_kiokud.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wc.dat" />
+    <None Include="hw.dat" />
+    <None Include="wr.dat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
