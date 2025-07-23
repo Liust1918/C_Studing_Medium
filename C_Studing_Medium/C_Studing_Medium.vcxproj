@@ -144,6 +144,8 @@
     <ClCompile Include="A4_3_jugde.cpp" />
     <ClCompile Include="A4_4_mastermind.cpp" />
     <ClCompile Include="A5_1_kiokud.cpp" />
+    <ClCompile Include="A5_2_kiokud1.cpp" />
+    <ClCompile Include="A5_3_kiokud2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wc.dat" />

@@ -66,6 +66,12 @@
     <ClCompile Include="A5_1_kiokud.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="A5_2_kiokud1.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A5_3_kiokud2.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="hw.dat">
