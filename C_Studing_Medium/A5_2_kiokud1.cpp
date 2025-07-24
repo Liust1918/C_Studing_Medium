@@ -10,7 +10,7 @@
 
 //在 Microsoft 的 scanf_s 规则中：
 //如果你使用% s（读字符串），必须提供目标 char[] 的 缓冲区大小，否则会触发访问冲突（访问未授权内存）
-//scanf_s("%s", input, (unsigned)_countof(input));	✅ 安全，VS推荐方式
+//scanf_s("%s", input, (unsigned)_countof(input));	 安全，VS推荐方式
 
 //printf_s("\r%*s\r 请输入答案:", selectedLevel, "");
 
@@ -69,7 +69,7 @@ int main_5_2(void) {
 		}
 	} while (++stage<MAX_STGAE);
 	endTime = clock();
-	printf("你在难度%d LEVEL 中的%d 轮回答 中 正确回答了%d个问题 用时%.3lfs \n", selectedLevel, MAX_STGAE, winNum, (double)((endTime-startTime) / CLOCKS_PER_SEC));
+	printf("你在难度%d LEVEL 中的%d 轮回答 中 正确回答了%d个问题 用时%.3lfs \n", selectedLevel, MAX_STGAE, winNum, (double)((endTime - startTime) / CLOCKS_PER_SEC));
 
 	return 0;
 }

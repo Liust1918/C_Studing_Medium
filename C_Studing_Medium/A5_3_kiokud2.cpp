@@ -3,6 +3,11 @@
 //char lower = 'A' + 32;  // => 'a'
 //char upper = 'z' - 32;  // => 'Z'
 
+//一个数组 'A'-'Z' 'a'-'z'
+// az[i] = 'A' + i;    az[i+26] = 'a' + i;
+
+//数组最好初始化
+
 //5.3 字符串记忆训练
 
 #include <stdio.h>
@@ -38,12 +43,15 @@ void getCharArray(char az[]) {
 	}
 }
 
-int main(void) {
+
+
+int main_5_3(void) {
 	clock_t startTime, endTime;
 	int winNum = 0;
 	int stage = 0;
 	int sLevel = 0;
-	char az[32];
+	char az[53] = {0};
+	int i;
 	srand((unsigned)time(NULL));
 	do{
 		printf("请在 %d ~ %d LEVEL 选择 \n", MIN_LEVEL, MAX_LEVEL);
@@ -52,17 +60,38 @@ int main(void) {
 
 	getCharArray(az);
 
-	do{
-		//随机
-		
 
+	startTime = clock();
+	do{
+		
+		char num[MAX_LEVEL + 1] = {0};
+		char input[MAX_LEVEL * 2];
+		//随机
+		for ( i = 0; i < sLevel; i++){
+			num[i] = az[(rand() %( strlen(az)-1))];
+		}
+
+		printf_s("%s", num);
+		sleep_k2(125 * sLevel);
 
 		//输入
-
+		printf_s("\r%*s\r 请输入答案：", sLevel, "");
+		scanf_s("%s", input, (unsigned)_countof(input));
 
 		//判断
+		if (strcmp(num,input)!=0) {
+			puts("回答错误");
+		}
+		else {
+			puts("回答正确");
+			winNum++;
+		}
 
 
 	} while (++stage<MAX_STAGE);
+	endTime = clock();
+	printf("你在难度%d LEVEL 中的%d 轮回答 中 正确回答了%d个问题 用时%.3lfs \n", sLevel, MAX_STAGE, winNum, (double)((endTime - startTime) / CLOCKS_PER_SEC));
 
+
+	return 0;
 }

@@ -72,6 +72,12 @@
     <ClCompile Include="A5_3_kiokud2.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="A5_4_plusone.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A5_5_plusone2.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="hw.dat">
