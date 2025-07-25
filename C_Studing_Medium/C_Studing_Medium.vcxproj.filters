@@ -78,6 +78,12 @@
     <ClCompile Include="A5_5_plusone2.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="A5_6_plusone3.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A5_7_plusone4.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="hw.dat">

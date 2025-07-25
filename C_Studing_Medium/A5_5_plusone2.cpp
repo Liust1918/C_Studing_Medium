@@ -19,7 +19,7 @@ int sleep_po2(unsigned long ms) {
 }
 
 
-int main(void) {
+int main_5_5(void) {
 	clock_t startTime, endTime;
 	srand((unsigned)time(NULL));
 	int sLevel = 0;
