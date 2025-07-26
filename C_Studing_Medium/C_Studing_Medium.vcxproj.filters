@@ -84,6 +84,24 @@
     <ClCompile Include="A5_7_plusone4.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="A6_1_week.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A6_2_Calendar.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A6_4_commandArgument.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A7_1_num.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A7_2_changeCFuntion.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A7_3_VSUM.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="hw.dat">
@@ -95,5 +113,10 @@
     <None Include="wc.dat">
       <Filter>Source Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
