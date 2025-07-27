@@ -1,27 +1,36 @@
-/*ÓÃÓÚ·ÃÎÊ¿É±ä²ÎÊıµÄº¯Êı
-(ÖØµãÀí½â£º²ÎÊıµÄµØÖ·ÊÇÁ¬ĞøµÄ)
+ï»¿/*ç”¨äºè®¿é—®å¯å˜å‚æ•°çš„å‡½æ•°
+(é‡ç‚¹ç†è§£ï¼šå‚æ•°çš„åœ°å€æ˜¯è¿ç»­çš„)
 */
+/*
+ç”¨ <stdarg.h> æ›´å®‰å…¨ã€å¯ç»´æŠ¤
+åšæ³•	æ˜¯å¦æ¨è	åŸå› 
+æ‰‹åŠ¨ (char*)&sw ç®—åœ°å€	âŒ ä¸æ¨è	ä¸å¯ç§»æ¤ã€å¯¹é½ä¸å¯é ã€æ˜“é”™
+ä½¿ç”¨ <stdarg.h>	âœ… æ¨è	æ ‡å‡†ã€å®‰å…¨ã€å¹³å°å…¼å®¹ã€å¯è¯»æ€§é«˜
+ä»¥ä¸‹ä»…ä½œå­¦ä¹ 
+
+*/
+
 #include <stdio.h>
 typedef char* va_list; //?
 #define va_start(ap,sw) (ap=(va_list)&sw + sizeof(va_list))
 #define va_end(ap) ((va_list)0)
-#define va_arg(ap,type) (*(type*)((ap += sizeof(type*)) - sizeof(type*))) //typeÊÇĞÎÊ½²ÎÊı,Ö»ÊÇÕ¼Î»·û
+#define va_arg(ap,type) (*(type*)((ap += sizeof(type*)) - sizeof(type*))) //typeæ˜¯å½¢å¼å‚æ•°,åªæ˜¯å ä½ç¬¦
 
 double vsum(int sw, ...) {
-	//swºóÃæÈë²ÎµÄÆğÊ¼µØÖ·  ÓÃchar*ÊÇÒòÎªcharÊÇ1Byte
+	//swåé¢å…¥å‚çš„èµ·å§‹åœ°å€  ç”¨char*æ˜¯å› ä¸ºcharæ˜¯1Byte
 	double sum = 0.0;
 	char* ap = (char*)&sw + sizeof(char*);
 
 	switch (sw) {
 	case 0: //int + int 
 		/*
-		·½·¨Ò»  
-		sum += *(int*)ap;    //È¡Öµ
-		ap += sizeof(int*);  //Ö¸ÕëÒÆ¶¯
-		sum += *(int*)ap;    //ÔÚÈ¡Öµ
+		æ–¹æ³•ä¸€  
+		sum += *(int*)ap;    //å–å€¼
+		ap += sizeof(int*);  //æŒ‡é’ˆç§»åŠ¨
+		sum += *(int*)ap;    //åœ¨å–å€¼
 		*/
 		/*
-		¼ò»¯·½·¨Ò»
+		ç®€åŒ–æ–¹æ³•ä¸€
 		*/
 		sum += (*(int*)((ap += sizeof(int*)) - sizeof(int*)));
 		sum += (*(int*)((ap += sizeof(int*)) - sizeof(int*)));
@@ -47,12 +56,12 @@ double vsum(int sw, ...) {
 	}
 
 
-	//·ÀÖ¹¿ÕÖ¸Õë
+	//é˜²æ­¢ç©ºæŒ‡é’ˆ
 	ap = (char*)0; 
 	return sum;
 }
 
-int main(void) {
+int main_7_3(void) {
 
 	printf("10+2                 =%.2lf \n", vsum(0, 10, 2));
 	printf_s("57+300000L           =%.2f \n", vsum(1, 57, 300000L));

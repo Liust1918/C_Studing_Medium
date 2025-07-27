@@ -156,6 +156,11 @@
     <ClCompile Include="A7_1_num.cpp" />
     <ClCompile Include="A7_2_changeCFuntion.cpp" />
     <ClCompile Include="A7_3_VSUM.c" />
+    <ClCompile Include="A7_4_threeChar.c" />
+    <ClCompile Include="A8_1_writer.cpp" />
+    <ClCompile Include="A8_2_multCharwriter.cpp" />
+    <ClCompile Include="A9_1_inputUserChar.cpp" />
+    <ClCompile Include="A9_2_copyFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wc.dat" />

@@ -102,6 +102,21 @@
     <ClCompile Include="A7_3_VSUM.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="A7_4_threeChar.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A8_1_writer.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A8_2_multCharwriter.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A9_1_inputUserChar.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A9_2_copyFile.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="hw.dat">
