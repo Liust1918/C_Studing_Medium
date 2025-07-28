@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A10_1_randomChEnWord.cpp" />
+    <ClCompile Include="A10_2_pointArrayMalloc.cpp" />
+    <ClCompile Include="A10_3_stringPointMalloc.cpp" />
     <ClCompile Include="A1_1_kazuate.cpp" />
     <ClCompile Include="A1_2_array.cpp" />
     <ClCompile Include="A2_1_backspace.cpp" />
@@ -161,6 +164,9 @@
     <ClCompile Include="A8_2_multCharwriter.cpp" />
     <ClCompile Include="A9_1_inputUserChar.cpp" />
     <ClCompile Include="A9_2_copyFile.cpp" />
+    <ClCompile Include="A9_3_commandArgcChar.cpp" />
+    <ClCompile Include="A9_4_commandFileTobinary.cpp" />
+    <ClCompile Include="A9_5_bcopy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wc.dat" />

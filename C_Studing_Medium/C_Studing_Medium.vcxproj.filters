@@ -117,6 +117,24 @@
     <ClCompile Include="A9_2_copyFile.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="A9_3_commandArgcChar.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A9_4_commandFileTobinary.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A9_5_bcopy.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A10_1_randomChEnWord.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A10_2_pointArrayMalloc.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A10_3_stringPointMalloc.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="hw.dat">
